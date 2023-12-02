@@ -26,9 +26,18 @@ function listItems(orderArray){
   return itemString
 }
 
+function searchOrder(orderList, order) {
+  var isOrder = orderList.find(orderVal => orderVal.item === order);
+  if (isOrder) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 module.exports = {
   takeOrder,
   refundOrder,
   listItems,
-  // searchOrder
+  searchOrder
 }
